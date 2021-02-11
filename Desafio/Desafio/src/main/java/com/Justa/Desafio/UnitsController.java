@@ -87,13 +87,13 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = 3600;
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/3600;
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*3600;
 								}
 								
 								operator = '-';
@@ -106,30 +106,31 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = 86400;
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/86400;
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*86400;
 								}
 								
 								operator = '-';
 								
 								units+="s";
 								tempUnit="";
+								
 							}else if(tempUnit.equals("arcminute")||tempUnit.equals("'")) {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = (Math.PI/10800);
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/(Math.PI/10800);
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*(Math.PI/10800);
 								}
 								
 								operator = '-';
@@ -140,13 +141,13 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = (Math.PI/648000);
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/(Math.PI/648000);
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*(Math.PI/648000);
 								}
 								
 								operator = '-';
@@ -157,13 +158,13 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = 10000;
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/10000;
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*10000;
 								}
 								
 								operator = '-';
@@ -174,13 +175,13 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = 0.001;
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/0.001;
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*0.001;
 								}
 								
 								operator = '-';
@@ -191,13 +192,13 @@ public class UnitsController {
 								
 								if(multFactor==0) {
 									
-									multFactor = 2;
+									multFactor = 1000;
 									
 								}else if(operator =='/') {
-									multFactor = multFactor/2;
+									multFactor = multFactor/1000;
 									
 								}else if(operator =='*') {
-									multFactor = multFactor*2;
+									multFactor = multFactor*1000;
 								}
 								
 								operator = '-';
@@ -255,13 +256,13 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = 3600;
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/3600;
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*3600;
 									}
 									
 									operator = '-';
@@ -272,13 +273,13 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = 86400;
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/86400;
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*86400;
 									}
 									
 									operator = '-';
@@ -289,13 +290,13 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = (Math.PI/10800);
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/(Math.PI/10800);
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*(Math.PI/10800);
 									}
 									
 									operator = '-';
@@ -306,13 +307,13 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = (Math.PI/648000);
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/(Math.PI/648000);
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*(Math.PI/648000);
 									}
 									
 									operator = '-';
@@ -323,30 +324,32 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = 10000;
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/10000;
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*10000;
 									}
 									
 									operator = '-';
 									
 									units+="m^2";
 									tempUnit="";
+									
+									
 								}else if((tempUnit.equals("litre")||tempUnit.equals("L")) && (eqUnit.charAt(i+1)=='/' || eqUnit.charAt(i+1)=='*' || eqUnit.charAt(i+1)=='(' || eqUnit.charAt(i+1)==')')) {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = 0.001;
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/0.001;
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*0.001;
 									}
 									
 									operator = '-';
@@ -357,13 +360,13 @@ public class UnitsController {
 									
 									if(multFactor==0) {
 										
-										multFactor = 2;
+										multFactor = 1000;
 										
 									}else if(operator =='/') {
-										multFactor = multFactor/2;
+										multFactor = multFactor/1000;
 										
 									}else if(operator =='*') {
-										multFactor = multFactor*2;
+										multFactor = multFactor*1000;
 									}
 									
 									operator = '-';

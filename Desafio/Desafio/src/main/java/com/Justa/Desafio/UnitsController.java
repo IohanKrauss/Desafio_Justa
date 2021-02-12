@@ -374,7 +374,7 @@ public class UnitsController {
 				}
 			}
 			
-		return new units(units,multFactor);
+		return new Units(units,multFactor);
 		
 	}
 	

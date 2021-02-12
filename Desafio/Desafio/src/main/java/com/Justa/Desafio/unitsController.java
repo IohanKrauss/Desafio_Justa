@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
-public class UnitsController {
+public class unitsController {
 
 	
 	@GetMapping("units/si")
 	
-	public Units si(@RequestParam(value = "units", defaultValue = "") String eqUnit) {
+	public units si(@RequestParam(value = "units", defaultValue = "") String eqUnit) {
 		
 		
 		double multFactor = 0;
@@ -63,7 +63,7 @@ public class UnitsController {
 								
 								units+="rad";
 								
-							//verificacao para minutos	
+								
 							}else if(tempUnit.equals("minute")||tempUnit.equals("min")) {
 								
 								if(multFactor==0) {
@@ -81,8 +81,6 @@ public class UnitsController {
 								
 								units+="s";
 								tempUnit="";
-								
-								//verificacao para horas
 							}else if(tempUnit.equals("hour")||tempUnit.equals("h")) {
 								
 								if(multFactor==0) {
@@ -100,8 +98,6 @@ public class UnitsController {
 								
 								units+="s";
 								tempUnit="";
-								
-								
 							}else if(tempUnit.equals("day")||tempUnit.equals("d")) {
 								
 								if(multFactor==0) {
@@ -378,7 +374,7 @@ public class UnitsController {
 				}
 			}
 			
-		return new Units(units,multFactor);
+		return new units(units,multFactor);
 		
 	}
 	

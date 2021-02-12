@@ -1,11 +1,11 @@
 package com.Justa.Desafio;
 
-public class Units {
+public class units {
 	
 	private String unit_name;
 	private Number mutiplication_factor;
 	
-	public Units(String unit_name,Number mutiplication_factor) {
+	public units(String unit_name,Number mutiplication_factor) {
 		
 		this.unit_name = unit_name;
 		this.mutiplication_factor = mutiplication_factor;

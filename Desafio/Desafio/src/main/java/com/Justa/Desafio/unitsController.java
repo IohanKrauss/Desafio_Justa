@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
-public class unitsController {
+public class UnitsController {
 
 	
 	@GetMapping("units/si")
 	
-	public units si(@RequestParam(value = "units", defaultValue = "") String eqUnit) {
+	public Units si(@RequestParam(value = "units", defaultValue = "") String eqUnit) {
 		
 		
 		double multFactor = 0;
